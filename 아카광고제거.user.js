@@ -4,6 +4,7 @@
 // @match       https://*.about.co.kr/*
 // @match       https://*.iacstatic.co.kr/*
 // @match       https://*.adop.cc/*
+// @match       https://*.adnxs.com/*
 // @match       https://arca.live/*
 // @grant       none
 // @version     1.0
@@ -33,7 +34,7 @@ const isSponsored = () => {
   else return false;
 }
 
-window.location.href.includes("criteo.net") || window.location.href.includes("about.co.kr") || window.location.href.includes("iacstatic.co.kr") || window.location.href.includes("adop.cc") ? window.location.href = "about:blank" : undefined;
+window.location.href.includes("criteo.net") || window.location.href.includes("about.co.kr") || window.location.href.includes("iacstatic.co.kr") || window.location.href.includes("adop.cc") || window.location.href.includes("adnxs.com") ? window.location.href = "about:blank" : undefined;
 
 if (window.location.href.includes("arca.live")) {
   document.querySelector('.body .right-sidebar .ad').style.display = 'none';
