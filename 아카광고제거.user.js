@@ -5,16 +5,17 @@
 // @match       https://*.iacstatic.co.kr/*
 // @match       https://*.adop.cc/*
 // @match       https://*.adnxs.com/*
+// @match       https://*.g.doubleclick.net/*
 // @match       https://arca.live/*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
 // @description 사이드바 광고 없애기. 적자? 알빠노? (유저광고 제외)
 // ==/UserScript==
 
-// 최종수정일: 2024-Jan-04 00:26 KST
+// 최종수정일: 2024-Jan-17 07:49 KST
 
 const hasIframe = (e) => {
   if(e?.tagName.toLowerCase() === 'iframe') {
@@ -34,7 +35,7 @@ const isSponsored = () => {
   else return false;
 }
 
-window.location.href.includes("criteo.net") || window.location.href.includes("about.co.kr") || window.location.href.includes("iacstatic.co.kr") || window.location.href.includes("adop.cc") || window.location.href.includes("adnxs.com") ? window.location.href = "about:blank" : undefined;
+window.location.href.includes("criteo.net") || window.location.href.includes("about.co.kr") || window.location.href.includes("iacstatic.co.kr") || window.location.href.includes("adop.cc") || window.location.href.includes("adnxs.com") || window.location.href.includes("g.doubleclick.net") ? window.location.href = "about:blank" : undefined;
 
 if (window.location.href.includes("arca.live")) {
   document.querySelector('.body .right-sidebar .ad').style.display = 'none';
