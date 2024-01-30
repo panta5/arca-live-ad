@@ -52,5 +52,5 @@ if (window.location.href.includes("arca.live")) {
   setTimeout(()=>{
     clearInterval(itv);
     console.log('Interval Cleared!');
-  }, 3000);
+  }, 500);
 }
