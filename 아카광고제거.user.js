@@ -8,13 +8,13 @@
 // @match       https://*.g.doubleclick.net/*
 // @match       https://arca.live/*
 // @grant       none
-// @version     1.2
+// @version     1.3
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @description 사이드바 광고 없애기. 적자? 알빠노? (유저광고 제외)
 // ==/UserScript==
 
-// 최종수정일: 2024-Jan-30 10:47 KST
+// 최종수정일: 2024-Jan-30 10:52 KST
 
 const hasIframe = (e) => {
   if(e?.tagName.toLowerCase() === 'iframe') {
