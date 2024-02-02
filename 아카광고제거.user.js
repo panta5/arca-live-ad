@@ -9,7 +9,7 @@
 // @match       https://*.bidr.io/*
 // @match       https://arca.live/*
 // @grant       none
-// @version     1.11
+// @version     1.12
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
@@ -61,6 +61,6 @@ window.addEventListener('load', function () {
         });
         setTimeout(() => {
             clearInterval(removeSidebarAd);
-        }, 3000);
+        }, 1500);
     }
 });
