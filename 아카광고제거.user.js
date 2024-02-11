@@ -10,27 +10,14 @@
 // @match       https://*.vntsm.com/*
 // @match       https://arca.live/*
 // @grant       none
-// @version     1.23
+// @version     1.24
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
 // @description 사이드바 광고 없애기. 적자? 알빠노? (유저광고 제외)
 // ==/UserScript==
 
-// 최종수정일: 2024-Feb-08 15:18 KST
-
-const hasIframe = (e) => {
-    if (e?.tagName.toLowerCase() === 'iframe') {
-        return true;
-    }
-    let children = e?.children;
-    for (let i = 0; i < children?.length; i++) {
-        if (hasIframe(children[i])) {
-            return true;
-        }
-    }
-    return false;
-};
+// 최종수정일: 2024-Feb-11 17:11 KST
 
 const isSponsored = () => {
     if (document.querySelectorAll('a.a-badge.sponsored')?.length > 0) return true;
@@ -58,6 +45,7 @@ const actJustice = (topAd) => {
 };
 
 window.addEventListener('load', function () {
+    if (window.location.href.includes('arca.live/login')) return;
     if (window.location.href.includes('arca.live')) {
         const customStyle = document.createElement('style');
         customStyle.innerHTML = `iframe, .body .right-sidebar .ad, .body .left-ad-area .small-ad {display: none !important;}`;
