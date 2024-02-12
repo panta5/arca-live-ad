@@ -10,19 +10,14 @@
 // @match       https://*.vntsm.com/*
 // @match       https://arca.live/*
 // @grant       none
-// @version     1.26
+// @version     1.27
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
 // @description 사이드바 광고 없애기. 적자? 알빠노? (유저광고 제외)
 // ==/UserScript==
 
-// 최종수정일: 2024-Feb-12 09:33 KST
-
-const isSponsored = () => {
-    if (document.querySelectorAll('a.a-badge.sponsored')?.length > 0) return true;
-    else return false;
-};
+// 최종수정일: 2024-Feb-12 09:46 KST
 
 window.location.href.includes('criteo.net') ||
 window.location.href.includes('about.co.kr') ||
@@ -47,7 +42,7 @@ window.addEventListener('load', function () {
     if (window.location.href.includes('arca.live/login')) return;
     if (window.location.href.includes('arca.live')) {
         const customStyle = document.createElement('style');
-        customStyle.innerHTML = `iframe:not(.body .board-article .article-body .article-content iframe[src^="https://www.youtube.com"]), .body .right-sidebar .ad, .body .left-ad-area .small-ad {display: none !important;}`;
+        customStyle.innerHTML = `iframe:not(.body .board-article .article-body .article-content iframe[src*="youtube.com"]):not(#hcaptcha-section > iframe:nth-child(1)):not(iframe[src*="hcaptcha.com"]), .body .right-sidebar .ad, .body .left-ad-area .small-ad {display: none !important;}`;
         document.head.appendChild(customStyle);
         const topAd = document.querySelectorAll('div[data-ad-b=f]')[1];
         setTimeout(() => {
