@@ -10,7 +10,7 @@
 // @match       https://*.vntsm.com/*
 // @match       https://arca.live/*
 // @grant       none
-// @version     1.30
+// @version     1.31
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
@@ -39,7 +39,7 @@ const actJustice = (topAd) => {
 };
 
 window.addEventListener('load', function () {
-    if (window.location.href.includes('arca.live/login')) return;
+    if (window.location.href.includes('arca.live/u/login')) return;
     if (window.location.href.includes('arca.live')) {
         const customStyle = document.createElement('style');
         customStyle.innerHTML = `iframe:not(iframe.arca-vote):not(#preview_frame):not(.body .board-article .article-body .article-content iframe):not(#hcaptcha-section > iframe:nth-child(1)):not(iframe[src*="hcaptcha.com"]), .body .right-sidebar .ad, .body .left-ad-area .small-ad {display: none !important;}`;
