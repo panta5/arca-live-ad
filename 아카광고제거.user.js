@@ -9,15 +9,16 @@
 // @match       https://*.bidr.io/*
 // @match       https://*.vntsm.com/*
 // @match       https://arca.live/*
+// @exclude     https://arca.live/r/*
 // @grant       none
-// @version     1.31
+// @version     1.32
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
 // @description 사이드바 광고 없애기. 적자? 알빠노? (유저광고 제외)
 // ==/UserScript==
 
-// 최종수정일: 2024-Feb-28 11:55 KST
+// 최종수정일: 2024-Jul-31 21:35 KST
 
 window.location.href.includes('criteo.net') ||
 window.location.href.includes('about.co.kr') ||
