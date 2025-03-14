@@ -5,6 +5,7 @@
 // @match       https://*.iacstatic.co.kr/*
 // @match       https://*.adop.cc/*
 // @match       https://*.adnxs.com/*
+// @match       https://*.adnxs-simple.com/*
 // @match       https://*.g.doubleclick.net/*
 // @match       https://*.bidr.io/*
 // @match       https://*.vntsm.com/*
@@ -28,6 +29,7 @@ window.location.href.includes('about.co.kr') ||
 window.location.href.includes('iacstatic.co.kr') ||
 window.location.href.includes('adop.cc') ||
 window.location.href.includes('adnxs.com') ||
+window.location.href.includes('adnxs-simple.com') ||
 window.location.href.includes('g.doubleclick.net') ||
 window.location.href.includes('bidr.io') ||
 window.location.href.includes('vntsm.com') ||
