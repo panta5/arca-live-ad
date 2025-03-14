@@ -8,10 +8,13 @@
 // @match       https://*.g.doubleclick.net/*
 // @match       https://*.bidr.io/*
 // @match       https://*.vntsm.com/*
+// @match       https://*.openx.net/*
+// @match       https://*.outbrain.com/*
+// @match       https://*.outbrainimg.com/*
 // @match       https://arca.live/*
 // @exclude     https://arca.live/r/*
 // @grant       none
-// @version     1.32
+// @version     1.33
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
@@ -27,7 +30,10 @@ window.location.href.includes('adop.cc') ||
 window.location.href.includes('adnxs.com') ||
 window.location.href.includes('g.doubleclick.net') ||
 window.location.href.includes('bidr.io') ||
-window.location.href.includes('vntsm.com')
+window.location.href.includes('vntsm.com') ||
+window.location.href.includes('openx.net') ||
+window.location.href.includes('outbrain.com') ||
+window.location.href.includes('outbrainimg.com')
     ? (window.location.href = 'about:blank')
     : undefined;
 
