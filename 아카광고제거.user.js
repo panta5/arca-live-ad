@@ -15,7 +15,7 @@
 // @match       https://arca.live/*
 // @exclude     https://arca.live/r/*
 // @grant       none
-// @version     1.33
+// @version     1.34
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
