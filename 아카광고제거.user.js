@@ -6,7 +6,7 @@
 // @match       https://*.adop.cc/*
 // @match       https://*.adnxs.com/*
 // @match       https://*.adnxs-simple.com/*
-// @match       https://*.g.doubleclick.net/*
+// @match       https://*.doubleclick.net/*
 // @match       https://*.bidr.io/*
 // @match       https://*.vntsm.com/*
 // @match       https://*.openx.net/*
@@ -16,11 +16,12 @@
 // @match       https://*.quantserve.com/*
 // @match       https://*.flashtalking.com/*
 // @match       https://*.ad-score.com/*
-// @match       https://*./*
+// @match       https://*.ybp.yahoo.com/*
+// @match       https://*.smaato.net/*
 // @match       https://arca.live/*
 // @exclude     https://arca.live/r/*
 // @grant       none
-// @version     1.35
+// @version     1.36
 // @author      PantaFive
 // @homepageURL https://github.com/panta5/arca-live-ad
 // @downloadURL https://github.com/panta5/arca-live-ad/raw/main/%EC%95%84%EC%B9%B4%EA%B4%91%EA%B3%A0%EC%A0%9C%EA%B1%B0.user.js
@@ -35,7 +36,7 @@ window.location.href.includes('iacstatic.co.kr') ||
 window.location.href.includes('adop.cc') ||
 window.location.href.includes('adnxs.com') ||
 window.location.href.includes('adnxs-simple.com') ||
-window.location.href.includes('g.doubleclick.net') ||
+window.location.href.includes('doubleclick.net') ||
 window.location.href.includes('bidr.io') ||
 window.location.href.includes('vntsm.com') ||
 window.location.href.includes('openx.net') ||
@@ -44,7 +45,9 @@ window.location.href.includes('outbrainimg.com') ||
 window.location.href.includes('quantcount.com') ||
 window.location.href.includes('quantserve.com') ||
 window.location.href.includes('flashtalking.com') ||
-window.location.href.includes('ad-score.com')
+window.location.href.includes('ad-score.com') ||
+window.location.href.includes('ybp.yahoo.com') ||
+window.location.href.includes('smaato.net')
     ? (window.location.href = 'about:blank')
     : undefined;
 
